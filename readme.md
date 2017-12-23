@@ -1,6 +1,8 @@
 Game of three
 
-u need to setup the envoirment 
+pre request
+1- java
+2- rabbitmq server you can install it by "docker-compose up" you will find docker-composer.yml
 
 
 
