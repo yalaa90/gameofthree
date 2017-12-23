@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import com.takeaway.task.producers.Producer;
 
 /**
+ * it's an parent to make my code more dry
  * 
  * @author yahia
  *

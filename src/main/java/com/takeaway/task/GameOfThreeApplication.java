@@ -14,6 +14,8 @@ import com.takeaway.task.producers.Producer;
 import com.takeaway.task.utils.TaskUtils;
 
 /**
+ * this class is starting point of the application and configuration to run it
+ * use java -jar jarname or mvn spring-boot:run
  * 
  * @author yahia
  *
@@ -25,8 +27,9 @@ public class GameOfThreeApplication {
 	Environment environment;
 
 	/**
+	 * declare first queue
 	 * 
-	 * @return
+	 * @return Queue
 	 */
 	@Bean
 	public Queue queueOne() {
@@ -34,8 +37,9 @@ public class GameOfThreeApplication {
 	}
 
 	/**
+	 * declare second queue
 	 * 
-	 * @return
+	 * @return Queue
 	 */
 	@Bean
 	public Queue queueTwo() {
@@ -43,28 +47,33 @@ public class GameOfThreeApplication {
 	}
 
 	/**
+	 * declare the first player consumer with profile name playone so u can run
+	 * it independent
 	 * 
-	 * @return
+	 * @return PlayerOneConsumer
 	 */
 	@Bean
-	@Profile("playone")
+	//@Profile("playone")
 	public PlayerOneConsumer playerOneConsumer() {
 		return new PlayerOneConsumer();
 	}
 
 	/**
+	 * declare the second player consumer with profile name playtwo so u can run
+	 * it independent
 	 * 
-	 * @return
+	 * @return PlayerTwoConsumer
 	 */
 	@Bean
-	@Profile("playtwo")
+//	@Profile("playtwo")
 	public PlayerTwoConsumer playerTwoConsumer() {
 		return new PlayerTwoConsumer();
 	}
 
 	/**
+	 * it's a open and close pattern so it can be player one or two
 	 * 
-	 * @return
+	 * @return Producer
 	 */
 
 	@Bean
@@ -73,6 +82,7 @@ public class GameOfThreeApplication {
 	}
 
 	/**
+	 * starting point of the application
 	 * 
 	 * @param args
 	 */

@@ -7,6 +7,7 @@ import com.takeaway.task.models.GameModel;
 import com.takeaway.task.utils.TaskUtils;
 
 /**
+ * first consumer based on queueone
  * 
  * @author yahia
  *
@@ -15,7 +16,7 @@ import com.takeaway.task.utils.TaskUtils;
 public class PlayerOneConsumer extends AbsConsumer {
 
 	/**
-	 * 
+	 * handling each request logging it and play the game and send it back to the second player 
 	 * @param model
 	 */
 	@RabbitHandler

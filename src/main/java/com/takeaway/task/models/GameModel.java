@@ -3,6 +3,7 @@ package com.takeaway.task.models;
 import java.io.Serializable;
 
 /**
+ * game model or dto for the game
  * 
  * @author yahia
  *

@@ -9,6 +9,8 @@ import com.takeaway.task.models.GameModel;
 import com.takeaway.task.utils.TaskUtils;
 
 /**
+ * this class is the producer or player based on queue so it can be both. and it
+ * contain the first game
  * 
  * @author yahia
  *
@@ -20,6 +22,7 @@ public class Producer implements CommandLineRunner {
 	private RabbitTemplate rabbitTemplate;
 
 	/**
+	 * validate the data and play the game
 	 * 
 	 * @param model
 	 * @param queueName
@@ -40,7 +43,7 @@ public class Producer implements CommandLineRunner {
 	}
 
 	/**
-	 * 
+	 * first game
 	 */
 	private void firstGame() {
 		GameModel model = new GameModel();
