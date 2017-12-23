@@ -25,10 +25,9 @@ public class TaskUtils {
 	 * @param number
 	 * @return GameModel
 	 */
-	public static GameModel playing(GameModel xmodel) {
+	public static GameModel playing(final GameModel xmodel) {
 		long number = Math.abs(xmodel.getResultNumber());
 		int added = (int) (-number - 1) % 3 + 1;
-		System.out.println((-number - 1));
 		GameModel model = new GameModel();
 		model.setAddedNumber(added);
 		model.setResultNumber((number + added) / 3);

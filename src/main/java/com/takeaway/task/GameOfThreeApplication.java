@@ -53,7 +53,7 @@ public class GameOfThreeApplication {
 	 * @return PlayerOneConsumer
 	 */
 	@Bean
-	//@Profile("playone")
+	@Profile("playone")
 	public PlayerOneConsumer playerOneConsumer() {
 		return new PlayerOneConsumer();
 	}
@@ -65,7 +65,7 @@ public class GameOfThreeApplication {
 	 * @return PlayerTwoConsumer
 	 */
 	@Bean
-//	@Profile("playtwo")
+	@Profile("playtwo")
 	public PlayerTwoConsumer playerTwoConsumer() {
 		return new PlayerTwoConsumer();
 	}
